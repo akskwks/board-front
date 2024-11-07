@@ -12,6 +12,9 @@ const BoardDetail = () => {
     const [editedTitle, setEditedTitle] = useState('');
     const [editedContent, setEditedContent] = useState('');
 
+    const [comments, setComments] = useState([]);
+    const [newComment, setNewComment] = useState({ nickname: '', content: '' });
+
     useEffect(() => {
         const fetchBoard = async () => {
             try {
@@ -26,6 +29,19 @@ const BoardDetail = () => {
 
         fetchBoard();
     }, [id]);
+
+
+    const handleCommentSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post(`http://localhost:8080/api/boards/${id}/comments`, newComment);
+            setComments([...comments, response.data]);
+            setNewComment({ nickname: '', content: '' });
+        } catch (error) {
+            console.error("Error submitting comment:", error);
+        }
+    };
+
 
     const handleDelete = async () => {
         try {
@@ -109,7 +125,36 @@ const BoardDetail = () => {
                     <button className='btn' onClick={handleDelete}>삭제</button>
                     </div>
                 </div>
+
+                
             )}
+
+<section>
+                <h3>댓글</h3>
+                <ul>
+                    {comments.map(comment => (
+                        <li key={comment.commentId}>
+                            <p><strong>{comment.nickname}:</strong> {comment.content}</p>
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            {/* 댓글 입력 폼 */}
+            <form onSubmit={handleCommentSubmit}>
+                <input
+                    type="text"
+                    placeholder="닉네임"
+                    value={newComment.nickname}
+                    onChange={(e) => setNewComment({ ...newComment, nickname: e.target.value })}
+                />
+                <textarea
+                    placeholder="댓글 내용"
+                    value={newComment.content}
+                    onChange={(e) => setNewComment({ ...newComment, content: e.target.value })}
+                />
+                <button type="submit">댓글 작성</button>
+            </form>
         </article>
     );
 };
