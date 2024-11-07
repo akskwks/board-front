@@ -10,7 +10,7 @@ const BoardForm = ({ onAddBoard }) => {
     const [user, setUser] = useState('');
     const navigate = useNavigate();  // useNavigate 훅 사용
 
-    const handleSubmit = (e) => { 
+    const handleSubmit = (e) => {  
         e.preventDefault();
 
         if (!title.trim()) {
