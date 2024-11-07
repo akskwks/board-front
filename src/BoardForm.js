@@ -45,7 +45,7 @@ const BoardForm = ({ onAddBoard }) => {
     };
 
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <h2>게시글 작성</h2>
             <form onSubmit={handleSubmit}>
                 <div className='boxform'>
