@@ -1,0 +1,46 @@
+.boxform {
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(60, 62, 63);
+    background-color: white;
+    padding: 8px 16px;
+    width: 400px;
+    height: auto;
+    font-size: 14px;
+}
+
+.boxform2 {
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(60, 62, 63);
+    background-color: white;
+    padding: 8px 16px;
+    width: 400px;
+    height: auto;
+    font-size: 14px;
+}
+
+
+.boxform3 {
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(60, 62, 63);
+    background-color: white;
+    padding: 8px 16px;
+    width: 400px;
+    height: auto;
+    font-size: 14px;
+}
+
+
+.btn {
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(75, 116, 133);
+    background-color: white;
+    padding: 4px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
