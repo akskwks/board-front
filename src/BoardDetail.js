@@ -104,8 +104,10 @@ const BoardDetail = () => {
                     </div>
                     <br />
                     <br />
-                    <button onClick={handleEditToggle}>수정</button>
-                    <button onClick={handleDelete}>삭제</button>
+                    <div style={{ display: 'flex', gap: '10px' }}>
+                    <button className='btn' onClick={handleEditToggle}>수정</button>
+                    <button className='btn' onClick={handleDelete}>삭제</button>
+                    </div>
                 </div>
             )}
         </article>

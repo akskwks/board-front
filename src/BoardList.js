@@ -40,9 +40,12 @@ const BoardList = ({ boards }) => {
                 </tbody>
             </table>
         </div>
+        
 
         
     );
+
+
 
     
 }

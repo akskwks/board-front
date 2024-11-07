@@ -56,7 +56,9 @@ const App = () => {
                   <Route path="/boards/:id" element={<BoardDetail />} />
                 </Routes>
             </div>
+            <div style={{ height: '200px' }}></div>
         </Router>
+        
     );
 }
 
